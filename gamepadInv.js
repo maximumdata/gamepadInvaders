@@ -3,7 +3,7 @@ var scoreEl = document.getElementById('score'),
     gameOverEl = document.getElementById('gameOver'),
     canvas = document.getElementById('canvas'),
     context = canvas.getContext('2d'),
-    width = window.innerWidth,
+    width = 600,
     height = window.innerHeight,
     player = {
       score: 0,
@@ -160,7 +160,7 @@ function doGameOver() {
 function startGame() {
   var startOverlay = document.getElementById('start');
   start.style.display = 'none';
-  var x = 3;
+  var x = 4;
   while(x) {
     new Enemy();
     x--;
