@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>gamepad invaders</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      font-size: 32px;
+    }
+    #canvas {
+      display: block;
+      background: black;
+    }
+    #start {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      z-index: 10;
+    }
+    #gameOver {
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,.75);
+    }
+    .info {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="gameOver"></div>
+  <div id="start">
+    This game requires a gamepad to play.<br>It will also only work in modern versions of Firefox, Chrome, and IE (Edge). Sorry Safari users!<br><br>Use the left stick to move, and either the right trigger or the A/X button to shoot.<br><br>Press the start button on your controller to play!
+  </div>
+  <div class="info">
+    <div id="score"></div>
+    <div id="lives"></div>
+  </div>
+  <canvas id="canvas"></canvas>
+  <script src="gamepadInv.js" charset="utf-8"></script>
+</body>
+</html>
